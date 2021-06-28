@@ -1,5 +1,6 @@
+
 'use strict'
-let Seattle = {
+ let Seattle = {
     name: 'Seattle',
     cookies: [],
     getcookies: function () {
@@ -147,4 +148,6 @@ for (let i = 0; i < Lima.cookies.length; i++) {
     Limaunorder.appendChild(Limalist);
 
     Limalist.textContent = "@ " + c + ':00: ' + Lima.cookies[i];
-}
+} 
+
+'use strict'
