@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+   
+    }
+h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #2DCCFC;
+}
+article h2{
+    font-size: x-large;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+    padding:20px 20px;
+}
+  body {
+    
+        font-family: 'Benne', serif;
+        padding: 15px;
+        background-color: #2DCCFC;
+    }
+   header nav {
+    background-color:#2E2CF2;
+    }
+    
+  header nav img{
+        margin-left:5%;
+        padding: 20px;
+        position: absolute;
+    }  
+header nav ul li:first-child {
+    margin-left: 20%;
+}
+header nav ul li {
+        display: inline-block;
+        padding: 40px 60px;
+        font-size: x-large;
+        
+}
+a{
+color: aliceblue;
+        text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+
+article dl dt {
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    width: 50%;  
+    margin-left: 15%;  
+}
+article dl dd {
+    padding: 6px;
+    font-size: medium;
+    font-weight: bold;
+    width: 50%;
+    margin-left: 15%;
+    
+}
+#fish{
+    width: 400px;
+    height: 400px;
+    padding: 15px;
+    float: right;
+    margin-right: 15%;
+}
+#cust {
+    float: right;
+    font-weight: bold;
+    margin-right: 20%;
+}
+nav dl dd{
+    padding: 6px;
+    font-size: medium;
+}
+nav dl dt {
+    padding: 10px;
+    font-size: large; 
+    
+}
+nav h2{
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    padding:20px 20px;
+}
+#family{
+    width: 400px;
+    height: 400px;
+    padding: 15px;
+    margin-left: 15%;
+}
+#cutter{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    float: right;
+    margin-right: 15%;
+}
+#download{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    float: right;
+    margin-right: 40%;
+}
+
+#frosted{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    margin-left: 15%;
+}
