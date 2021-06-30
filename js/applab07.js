@@ -2,6 +2,7 @@
 let time = ['Locations', '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm', 'Daily Location Total']
 
 // console.log(time.length);
+let arrofloctions = []
 
 function Location(name, avg, max, min) {
     this.name = name;
@@ -9,6 +10,9 @@ function Location(name, avg, max, min) {
     this.min = min;
     this.max = max;
     this.cookies = []
+    arrofloctions.push(this)
+
+
 }
 
 
@@ -176,3 +180,4 @@ for (let i = 0; i < hourlycookies.length; i++) {
     trtotals.appendChild(td6);
     td6.textContent = hourlycookies[i]
 }
+const formfield = document.getElementById("from")
