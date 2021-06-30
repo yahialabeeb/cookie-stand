@@ -1,3 +1,34 @@
 table, th, td {
     border: 1px solid black;
   }
+h1{
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #2DCCFC;
+}
+h2{
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  padding: 20px 15px;
+  
+}
+p{
+  font-size: larger;
+  font-weight: bolder;
+  padding: 15px 10px;
+
+}
+ul{
+  font-size: larger;
+  font-weight: bolder;
+  padding: 15px 10px;
+
+}
+a{
+  text-decoration: none;
+  color: black
+  ;
+}
