@@ -38,7 +38,7 @@ function handledata(event) {
     console.log(arrofloctions);
     City.data((arrofloctions.length - 1))
     City.tablestructre((arrofloctions.length - 1))
-    totalsrow();
+    totalrow(trtotals);
 }
 // console.log(arrofloctions);
 let hourlycookies = []
@@ -51,6 +51,7 @@ for (let i = 0; i < (time.length - 2); i++) {
     hourlycookies[i] = 0
 }
 Location.prototype.data = function (q) {
+    daily[q] = 0
     for (let i = 0; i < (time.length - 2); i++) {
         this.cookies.push(this.cookiesperhour(this.max, this.min, this.avg));
         daily[q] += this.cookies[i]
@@ -62,13 +63,10 @@ Location.prototype.data = function (q) {
 }
 
 for (let q = 0; q < arrofloctions.length; q++) {
-    daily[q] = 0
     arrofloctions[q].data(q)
 }
 
-console.log(hourstotal);
-console.log(daily);
-hourlycookies.push(hourstotal)
+
 
 // table strcture  
 
@@ -106,21 +104,26 @@ Location.prototype.tablestructre = function (q) {
 for (let q = 0; q < arrofloctions.length; q++) {
     arrofloctions[q].tablestructre(q)
 }
-totalsrow();
-// total row
+var trtotals = document.createElement('tr');
+trtotals.setAttribute("id", "totr");
+totalrow(trtotals);
 
-function totalsrow() {
-    let trtotals = document.createElement('tr');
-tablehtml.appendChild(trtotals);
+
+// total row
+function totalrow(trtotals) {
+    ('#totr').delete;
+    trtotals = document.createElement('tr');
+    tablehtml.appendChild(trtotals);
     let td6 = document.createElement('td');
     trtotals.appendChild(td6);
     td6.textContent = 'Totals'
-
     for (let i = 0; i < hourlycookies.length; i++) {
-
         let td6 = document.createElement('td');
         trtotals.appendChild(td6);
         td6.textContent = hourlycookies[i]
     }
-    return
+      let td7 = document.createElement('td');
+        trtotals.appendChild(td7);
+        td7.textContent = hourstotal
 }
+
