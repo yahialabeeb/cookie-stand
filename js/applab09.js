@@ -34,11 +34,14 @@ function handledata(event) {
     const minNew = parseInt(event.target.mini.value);
     const avgNew = parseInt(event.target.avg.value);
     City = new Location(newlocat, avgNew, maxNew, minNew);
-    console.log(City);
-    console.log(arrofloctions);
-    City.data((arrofloctions.length - 1))
+    let deleted = tablehtml.rows.length - 1
+    tablehtml.deleteRow(deleted)
+    City.data((arrofloctions.length - 1));
     City.tablestructre((arrofloctions.length - 1))
     totalrow(trtotals);
+    
+    console.log(deleted);
+    
 }
 // console.log(arrofloctions);
 let hourlycookies = []
@@ -106,12 +109,12 @@ for (let q = 0; q < arrofloctions.length; q++) {
 }
 var trtotals = document.createElement('tr');
 trtotals.setAttribute("id", "totr");
-totalrow(trtotals);
+totalrow();
 
 
 // total row
-function totalrow(trtotals) {
-    ('#totr').delete;
+function totalrow() {
+
     trtotals = document.createElement('tr');
     tablehtml.appendChild(trtotals);
     let td6 = document.createElement('td');
@@ -122,8 +125,8 @@ function totalrow(trtotals) {
         trtotals.appendChild(td6);
         td6.textContent = hourlycookies[i]
     }
-      let td7 = document.createElement('td');
-        trtotals.appendChild(td7);
-        td7.textContent = hourstotal
+    let td7 = document.createElement('td');
+    trtotals.appendChild(td7);
+    td7.textContent = hourstotal
 }
 
