@@ -28,19 +28,22 @@ const addlocationsform = document.getElementById('addlocation')
 addlocationsform.addEventListener('submit', handledata)
 let City
 function handledata(event) {
-   event.preventDefault();
+    event.preventDefault();
     const newlocat = event.target.locationField.value;
     const maxNew = parseInt(event.target.maxi.value);
     const minNew = parseInt(event.target.mini.value);
     const avgNew = parseInt(event.target.avg.value);
     City = new Location(newlocat, avgNew, maxNew, minNew);
-    console.log(City);
-    console.log(arrofloctions);
-    City.data((arrofloctions.length-1));
-    City.tablestructre((arrofloctions.length-1));
-    totalrow();
+    let deleted = tablehtml.rows.length - 1
+    tablehtml.deleteRow(deleted)
+    City.data((arrofloctions.length - 1));
+    City.tablestructre((arrofloctions.length - 1))
+    totalrow(trtotals);
+    
+    console.log(deleted);
+    
 }
-console.log(arrofloctions);
+// console.log(arrofloctions);
 let hourlycookies = []
 let hourstotal = 0
 //console.log(Seattle.max);
@@ -51,24 +54,22 @@ for (let i = 0; i < (time.length - 2); i++) {
     hourlycookies[i] = 0
 }
 Location.prototype.data = function (q) {
+    daily[q] = 0
     for (let i = 0; i < (time.length - 2); i++) {
         this.cookies.push(this.cookiesperhour(this.max, this.min, this.avg));
-        // console.log(Seattle.cookies);
         daily[q] += this.cookies[i]
         hourlycookies[i] += arrofloctions[q].cookies[i]
 
     }
     hourstotal += daily[q]
+
 }
 
 for (let q = 0; q < arrofloctions.length; q++) {
-    daily[q] = 0
     arrofloctions[q].data(q)
 }
 
-console.log(hourstotal);
-console.log(daily);
-hourlycookies.push(hourstotal)
+
 
 // table strcture  
 
@@ -106,23 +107,26 @@ Location.prototype.tablestructre = function (q) {
 for (let q = 0; q < arrofloctions.length; q++) {
     arrofloctions[q].tablestructre(q)
 }
+var trtotals = document.createElement('tr');
+trtotals.setAttribute("id", "totr");
+totalrow();
+
 
 // total row
-totalrow();
-function totalrow(){
-// trtotals.remove();
-let trtotals = document.createElement('tr');
-tablehtml.appendChild(trtotals);
+function totalrow() {
 
-let td6 = document.createElement('td');
-trtotals.appendChild(td6);
-td6.textContent = 'Totals'
-
-for (let i = 0; i < hourlycookies.length; i++) {
-
+    trtotals = document.createElement('tr');
+    tablehtml.appendChild(trtotals);
     let td6 = document.createElement('td');
     trtotals.appendChild(td6);
-    td6.textContent = hourlycookies[i]
-}
+    td6.textContent = 'Totals'
+    for (let i = 0; i < hourlycookies.length; i++) {
+        let td6 = document.createElement('td');
+        trtotals.appendChild(td6);
+        td6.textContent = hourlycookies[i]
+    }
+    let td7 = document.createElement('td');
+    trtotals.appendChild(td7);
+    td7.textContent = hourstotal
 }
 
