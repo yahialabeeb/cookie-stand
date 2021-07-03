@@ -7,23 +7,22 @@ h1 {
     font-weight: bolder;
     text-align: center;
     padding: 30px 20px;
-    background-color: #2DCCFC;
+    font-family: 'Lato', sans-serif;
 }
-article h2{
+ h2{
     font-size: x-large;
     font-weight: bolder;
     width: 50%;
     text-align: center;
     padding:20px 20px;
+    font-family: 'Lato', sans-serif;
 }
   body {
-    
-        font-family: 'Benne', serif;
         padding: 15px;
-        background-color: #2DCCFC;
+        background-color: #ABA484;
     }
    header nav {
-    background-color:#2E2CF2;
+    background-color:#615D4B;
     }
     
   header nav img{
@@ -38,7 +37,13 @@ header nav ul li {
         display: inline-block;
         padding: 40px 60px;
         font-size: x-large;
-        
+        font-family: 'Lora', serif;
+        color: aliceblue;       
+}
+#one {
+image-rendering: auto;
+margin-left: 30%;
+padding: 25px;
 }
 a{
 color: aliceblue;
@@ -47,13 +52,22 @@ color: aliceblue;
 a:hover{
     color: black;
 }
-
+h3{
+    font-size: x-large;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+    padding:20px 20px;
+    font-family: 'Lato', sans-serif;
+}
 article dl dt {
     padding: 10px;
     font-size: large;
     font-weight: bold;
     width: 50%;  
     margin-left: 15%;  
+    font-family: 'Lora', serif;
+    color: aliceblue;
 }
 article dl dd {
     padding: 6px;
@@ -61,6 +75,8 @@ article dl dd {
     font-weight: bold;
     width: 50%;
     margin-left: 15%;
+    font-family: 'Lora', serif;
+    color: aliceblue;
     
 }
 #fish{
@@ -69,6 +85,7 @@ article dl dd {
     padding: 15px;
     float: right;
     margin-right: 15%;
+    margin-top: 40px;
 }
 #cust {
     float: right;
@@ -78,17 +95,22 @@ article dl dd {
 nav dl dd{
     padding: 6px;
     font-size: medium;
+    font-family: 'Lora', serif;
+    color: aliceblue;
 }
 nav dl dt {
     padding: 10px;
     font-size: large; 
-    
+    font-family: 'Lora', serif;
+    color: aliceblue;
 }
 nav h2{
     font-size: x-large;
     font-weight: bolder;
     text-align: center;
     padding:20px 20px;
+    font-family: 'Lato', sans-serif;
+   
 }
 #family{
     width: 400px;
@@ -96,16 +118,25 @@ nav h2{
     padding: 15px;
     margin-left: 15%;
 }
-#cutter{
-    width: 300px;
-    height: 300px;
-    padding: 15px;
-    float: right;
-    margin-right: 15%;
-}
-#frosted{
-    width: 300px;
-    height: 300px;
+section ul img{
+    width: 200px;
+    height: 200px;
     padding: 15px;
     margin-left: 15%;
 }
+section ul li
+{
+    font-size: larger;
+   margin: 100px 0px 0 200px;
+float: left;
+}
+
+footer{
+    background-color:#615D4B;
+}
+ footer ul li{
+    padding: 10px;
+     width: 45%;
+     margin: auto;
+     color: white;
+ }

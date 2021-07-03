@@ -32,7 +32,7 @@ function handledata(event) {
     const newlocat = event.target.locationField.value;
     const maxNew = parseInt(event.target.maxi.value);
     const minNew = parseInt(event.target.mini.value);
-    const avgNew = parseInt(event.target.avg.value);
+    const avgNew = Number(event.target.avg.value);
     City = new Location(newlocat, avgNew, maxNew, minNew);
     let deleted = tablehtml.rows.length - 1
     tablehtml.deleteRow(deleted)

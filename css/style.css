@@ -1,18 +1,21 @@
 table, th, td {
     border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
   }
 h1{
   font-size: xx-large;
   font-weight: bolder;
   text-align: center;
   padding: 30px 20px;
-  background-color: #2DCCFC;
+  font-family: 'Lato', sans-serif;
+  background-color: #E0D7AD;
 }
 h2{
   font-size: x-large;
   font-weight: bolder;
-  text-align: center;
+  /* text-align: center; */
   padding: 20px 15px;
+  font-family: 'Lato', sans-serif;
   
 }
 p{
@@ -25,10 +28,35 @@ ul{
   font-size: larger;
   font-weight: bolder;
   padding: 15px 10px;
+  
 
 }
 a{
   text-decoration: none;
-  color: black
-  ;
+  color: aliceblue;
+}
+body{
+  background-color: #FAF1C8;
+}
+header nav {
+  background-color:#615D4B;
+  }
+
+header nav ul li {
+      display: inline-block;
+      padding: 40px 60px;
+      font-size: x-large;
+      font-family: 'Lora', serif;
+      color: aliceblue;
+      
+}
+#fromjs table {
+  background-color:#e6dfc3;
+  margin: 25px;
+}
+#addlocation , label{
+  padding: 20px;
+}
+ #addlocation input{
+  margin: 5px;
 }
